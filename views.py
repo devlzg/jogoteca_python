@@ -13,6 +13,7 @@ def index():
 def novo_jogo(): 
   if 'usuario_logado' not in session or session['usuario_logado'] == None:
     return redirect(url_for('login', proxima=url_for('novo_jogo')))
+  form = 
   return render_template('novo_jogo.html', titulo = 'Novo Jogo', )
 
 @app.route('/criar', methods=['POST', ])
